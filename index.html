@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Dahl Cruz</title>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <!-- ADD ICON LINK -->
+    <link rel = "icon" href = "./P_LOGO.png" type = "image/x-icon">
+
+    <!-- SOME FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
+
+    <!-- SOME ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ce30d4247d.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <!-- INTRO SECTION -->
+        <section class="home-section" href="#home" id="home">
+            <div class="bar">
+                <div class="logo">
+                    <img src="./P_LOGO.png" alt="Pablodcru Logo" class="logoimg">
+                </div>
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="#home" class="but-home" >Home</a></li>
+                            <li><a href="#aboutme" class="but-aboutme" >About Me</a></li>
+                            <li><a href="#skills" class="but-skills">Skills</a></li>
+                            <li><a href="#projects" class="but-projects">Projects</a></li>
+                            <li><a href="#contact" class="but-contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="title">
+                <h1>
+                    <span>Hi, I am</span>
+                    <span id="title">Pablo Dahl Cruz</span>
+                    <span>Front End Developer</span>
+                    <span><a href="#aboutme" class="fa-solid fa-chevron-down continue"></a></span>
+                </h1>
+            </div>
+        </section>
+    
+        <!-- BIO SECTION -->
+        <section class="aboutme-section" href="#aboutme" id="aboutme">
+            <h2>Ab<span>out </span>Me</h2>
+            <div class="aboutme">
+                <img class="resize" src="../../KSPLX/burrito.jpg"></img>
+                <div class="fullbio">
+                    <p class="bio">Please select a bio length according to your hurry:</p>
+                    <div class="buttons">
+                        <div>
+                            <p>Short</p>
+                            <button class="but1">O</button>
+                        </div>
+                        <div>
+                            <p>Medium</p>
+                            <button class="but2 selected">O</button>
+                        </div>
+                        <div>
+                            <p>Long</p>
+                            <button class="but3">O</button>
+                        </div>
+                    </div>
+                    <p class="biotext">Hi, I am a driven Front End Developer who enjoys developing robust websites and debugs patiently. I am passionate about learning new technologies and working on a team is a good way to find solutions that cannot be solved by oneself. I am a hard-worker and I can assure I will meet the expectations of your company.</p>
+                </div>
+            </div>
+            <div class="cv">
+                <a href="./DahlCruz_Pablo_CV.pdf" target="_blank" download>
+                    <button class="resume">My Resume</button>
+                </a>
+            </div>
+        </section>
+    
+        <!-- SKILLS SECTION -->
+        <section class="skills-section" id="skills">
+            <h2>S<span>kill</span>s</h2>
+            <p class="proudof">Technologies I feel comfortable with...</p>
+            <div class="skills">
+                <img src="./skills.PNG" alt="skills" class="skill">
+            </div>
+        </section>
+    
+        <!--PROJECTS SECTION -->
+        <section class="projects-section" id="projects">
+            <h2>Pr<span>ojec</span>ts</h2>
+            <p class="proudof">Here are some projects I am proud of...</p>
+            <div class="projects">
+                <a href="https://pablodcru.github.io/Arte-Di-Sognare/" target="_blank">
+                    <figure>
+                        <img src="./arteDiSognare.png" alt="ArteDiSognare">
+                        <figcaption class="project1">
+                            <p class="titleProject">Arte Di Sognare</p>
+                            <p>_____</p>
+                            <p>Art Gallery Web based on digital illustrations. I learnt mainly how to interact with the DOM and several animations.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://pablodcru.github.io/feed-a-mole/" target="_blank">
+                    <figure>
+                        <img src="./feedAMole.PNG" alt="FeedAMole">
+                        <figcaption class="project2">
+                            <p class="titleProject">Worm a Mole</p>
+                            <p>_____</p>
+                            <p>Little game where I learnt how to handle time and events in Javascript.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </section>
+    
+        <!-- CONTACT SECTION -->
+        <section class="contact-section" id="contact">
+            <h2>C<span>ontac</span>t</h2>
+            <p class="proudof"> I'd love to hear from you... Let me a message! </p>
+            <div class="alles">
+                <div>
+                    <form id="myform" onSubmit='process()' value="Reset form">
+                        <div class="formleft">
+                            <input type="text" id="firstName" placeholder="First Name" required>
+                            <input type="text" id="lastName" placeholder="Last Name">
+                            <input type="text" id="email" placeholder="Email">
+                        </div>
+                        <div class="formright">
+                            <textarea id="msg" placeholder="Type your message here..." required></textarea>
+                            <button class="submit" onClick='sendMail()' onsubmit='validate() == true;'>Submit</button>
+                        </div>
+                    </form>    
+                </div>
+                <div class="sayhi">
+                    <p>Alternatively, you can say hi to me in these platforms</p>
+                    <div class="icons">
+                        <a href="https://github.com/pablodcru" target="_blank" class="fab fa-github" ></a>
+                        <a href="https://www.linkedin.com/in/pablo-dahl-cruz/" target="_blank" class="fab fa-linkedin" ></a>
+                    </div>
+                </div>    
+            </div>
+        </section>
+    
+        <!-- COPYRIGHT SECTION -->
+        <section id="copyright">
+            <p> </p>
+            <i class="fab"><span class="little">&nbsp&nbsp&nbsp&nbsp &copy;</span> 2022 Pablo Dahl Cruz</i>
+        </section>
+    </div>
+
+
+<!-- Animation js
+    <section>
+        <div id="container">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+        
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                          0 1 0 0 0
+                          0 0 1 0 0
+                          0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+    </section>
+ -->
+
+ <!-- JS LINKS -->
+<script src="./portfolio.js"></script>
+    <!-- FORM FUNCTIONALITY -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("XMrBoayY0JIewdWbp");
+})();
+</script>
+
+</body>
+</html>

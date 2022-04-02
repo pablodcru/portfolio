@@ -1,0 +1,656 @@
+body{
+    font-family: 'Red Hat Mono', monospace;
+    background-color: black;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.home-section,
+.aboutme-section,
+.skills-section,
+.projects-section{
+    height: 100vh;
+    border: 1px solid black;
+    scroll-snap-align: center;
+}
+
+.contact-section{
+    height: 80vh;
+    scroll-snap-align: start;
+
+}
+
+.hidden{
+    display: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* HOME */
+
+.bar {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0px;
+
+}
+.logo{
+    text-align: start;
+    background-color: black;
+    padding-left: 30px;
+}
+.logoimg{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+}
+
+
+.underlined{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 3px;
+}
+.navbar {
+    background-color: black;
+    text-align: end;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+
+nav ul{
+    list-style-type: none;
+    padding-right: 10rem;
+    margin:0;
+}
+nav li{
+    text-align:end;
+    margin-bottom:0.5rem;
+    display: inline-block;        /*este es el comando para ponerlo horizontal*/
+}
+nav a{
+    font-family: 'Palette Mosaic', cursive;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    padding-top: 0.8rem;
+    margin-right: 2.7rem;
+}
+
+
+ul li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #ecf0f1;
+}
+ul li a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: whitesmoke;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/*HOME*/
+h1{
+    font-size: 90px;
+    font-family: 'Red Hat Mono', monospace;
+    color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: 20px;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+}
+
+h1 span {
+    display: flex;
+    justify-content:center;
+    opacity: 0;
+    filter: blur(4px);
+    margin-bottom: 20px;
+}
+
+.continue{
+    color: whitesmoke;
+    font-size: 24px;
+    margin-top: 100px;
+    animation: resize 2s linear infinite;
+    
+}
+.continue:hover{
+    animation-play-state: paused;
+}
+
+@keyframes resize{
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.4);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+
+}
+.continue:hover{
+    color: rgb(30, 110, 48);
+    cursor: pointer;
+    animation-duration:0;
+}
+  
+span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+  
+span:nth-child(2) {
+    animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+    animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(4) {
+    animation: fade-in 0.8s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+}
+
+#title{
+    background: -webkit-linear-gradient(left, rgb(19, 54, 19), rgb(82, 250, 82) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 90px;
+}
+
+.title {
+    margin-top: 60px;
+}
+
+
+
+/*ABOUT ME*/
+
+
+h2 {
+    color: whitesmoke;
+    font-size: 30px;
+    font-style: bolder;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+h2 span {
+    text-decoration: underline rgb(30, 110, 48);
+    text-underline-offset: 10px;
+    text-decoration-thickness: 4px;
+}
+
+
+.aboutme{
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+.resize {
+    width: 500px;
+    height: auto;
+    margin-right: 90px;
+    border-radius: 50%;
+}
+
+
+.fullbio {
+    display: block;
+    width: 600px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.biotext{
+    padding-top: 20px;
+    text-align: justify;
+    
+}
+
+.but1, .but2, .but3 {
+    padding: 2px 3px;
+    font-size: 10px;
+    color: rgb(30, 110, 48);
+    background-color: rgb(30, 110, 48);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.selected {
+    color: yellow;
+    background-color:yellow;
+}
+
+.resume{ 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    color: whitesmoke;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 900;
+    background-color:black;
+    border: 1px solid rgb(30, 110, 48);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 5px rgba(30, 110, 48, 0.3);
+    margin-top: 35px;
+}
+
+.resume:hover {
+    color: whitesmoke;
+    background-color:rgb(30, 110, 48);
+    border: 1px solid rgb(30, 110, 48);
+}
+
+.resume:active {
+    transform: scale(0.95);
+}
+.cv{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/* PROJECTS */
+
+.proudof{
+    font-size: 16px;
+    color: whitesmoke;
+    margin-left: 192px;
+    margin-bottom: 50px;
+}
+
+.projects{
+    display: flex;
+    justify-content: space-around;
+    font-family: inherit;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+.projects img{
+    max-width: 100%;
+    height: auto;
+}
+
+.titleProject {
+    font-weight: 900;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    position:relative;
+    opacity: 1;
+}
+figcaption {
+    display: flex;
+    position: absolute;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: lightgreen;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
+figcaption:hover {
+    cursor: pointer;
+    opacity:1 ;
+}
+
+/* SKILLS */
+
+.skills img{
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#skills p{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+/*CONTACT */
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.alles{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+/*LEFT SIDE*/
+
+.form{
+    display: block;
+}
+
+.formleft {
+    display: inline-block;
+}
+
+.formright {
+    display: flex;
+    flex-direction: column;
+    width:max-content;
+    align-items: flex-end;
+}
+
+
+input, textarea {
+    font-size: 100%;
+    font-family: inherit;
+    color: whitesmoke;
+    text-decoration: none;
+    border: none;
+    border-bottom: 2px solid rgb(30, 110, 48);
+    background-color: black;
+    resize: none;
+}
+textarea {
+    overflow: auto;
+}
+
+.formleft input{
+    width: 200px;
+    height: 30px;
+}
+
+.formright input,textarea{
+    margin-top: 10px;
+    width: 625px;
+    height: 150px;
+}
+
+.submit {
+    width: 80px;
+    height:35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    color: white;
+    font-family: inherit;   
+    margin-top: 10px;
+    background-color: rgb(30, 110, 48);
+    border:none;
+}
+.submit:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
+.submit:active {
+    transform:scale(0.98);
+}
+
+
+
+/*RIGHT SIDE*/
+
+.sayhi {
+    font-size: 16px;
+    font-family: inherit;
+    color: whitesmoke;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.fab {
+    font-size: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+    align-items: center;  
+    margin-right: 30px;  
+}
+
+.icons{
+    text-align: center;    
+}
+
+
+/*COPYRIGHT*/
+
+#copyright{
+    display: flex;
+    flex-direction: column;
+}
+
+#copyright p{
+    border: 1px solid rgb(30, 110, 48);
+    text-align: center;
+    margin: 50px 60px 10px 60px;
+    background-color: rgb(30, 110, 48);
+}
+
+
+
+#copyright i{
+    font-family: inherit;
+    font-size: 12px;
+    color:whitesmoke;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1145px){
+    .biotext{
+        font-size: 15px;
+    }
+    .projects{
+        flex-direction: column;
+
+    }
+    .projects a{
+        height: 305px;
+        width: 650px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+/*     .projects figure{ cuando ponga los botones de code en github y demas pasar los datos de projects a a este
+        height: 305px;
+        width: 650px;
+
+    } */
+    .home-section,
+    .aboutme-section,
+    .skills-section,
+    .contact-section{
+        scroll-snap-align: none;
+    }
+    .projects-section{
+        height: 100%;
+    }
+    html{
+        scroll-snap-type: none;
+    }
+
+    .resize {
+        margin-right: 70px;
+    }
+    
+    
+    .fullbio {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1104px){
+    .biotext{
+        font-size:14px;
+    }
+    .resize{
+        width: 400px;
+        height: auto;
+    }
+    nav ul {
+        padding-right: 5rem;
+    }
+
+}
+
+@media (max-width: 1062px){
+    .continue{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 990px){
+    #myform{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formleft{
+        width: 300px;
+        height: 90px;
+    }
+    .formright{
+        margin-top: 10px;
+        width: 300px;
+        height: 190px;
+    }
+    .formleft input{
+        width: 100%;
+        height: 30px;
+    }
+    .formright textarea{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 945px){
+    .aboutme{
+        flex-direction: column;
+    }
+    .resize, .fullbio{
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 15px;
+    }
+    #skills{
+        margin-top: 80px;
+        margin-bottom:-30px;
+    }
+    #projects, #contact{
+        margin-top: 0px;
+    }
+}
+
+
+
+
+/*animation js
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+
+#container {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    color: rgb(56, 119, 56);
+    font-family: "Raleway", sans-serif;
+    font-size: 70px;
+    text-align: center;
+    user-select: none;
+}
