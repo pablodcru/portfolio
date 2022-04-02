@@ -126,7 +126,7 @@ contact.addEventListener('click', () => {
 
 
 function changin (){
-    if (window.scrollY < 500) {
+    if (window.scrollY < 500 && window.scrollY = 0) {
         a.classList.add('underlined');
         b.classList.remove('underlined');
     }else if (window.scrollY > 500 && window.scrollY < 1300) {
