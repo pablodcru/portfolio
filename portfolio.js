@@ -19,13 +19,13 @@ const e = document.querySelector('.but-contact');
 
 // When the user scrolls down 20px from the top of the document, slide down the navbar
 // When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
-window.onscroll = function() {scrollFunction()};
+/*window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.querySelector('.navbar').style.top = "0";
   } 
-}
+}*/
 
 //submit alert
 function validate() {
@@ -86,7 +86,7 @@ button3.addEventListener('click', () => {
     biotext.innerHTML = 'Hi, my name is Pablo and I am a passionate Front End Developer. I consider myself responsive, as the websites that I develop, and a team-minded constructive person who will bring a proactive attitude to the team. Problems are there to be solved, independently or collaboratively, but always committed to find the best approach. I am determined to keep learning as much as I can, therefore, I can be a great asset to your company and I would be completely grateful to demonstrate my knowledge in a technical interview of the numerous skills listed below.';
 
 });
-
+/*
 home.addEventListener('click', () => {
     home.classList.add('underlined');
     aboutme.classList.remove('underlined');
@@ -147,7 +147,7 @@ function changin (){
     }
 }
 
-window.addEventListener('scroll', changin);
+window.addEventListener('scroll', changin);*/
 
 //Solve problems independently and collaboratively
 /* Hi , my name is Pablo and I am a passionate Front End Developer. I consider myself responsive, as the websites that I develop, and a team-minded constructive person who will bring a proactive attitude. Problems are there to be solved, independently or collaboratively, but always committed to find the best approach. I am determined to keep learning as much as I can, therefore, I can be a great asset for your company and I would be completely glad to demonstrate my knowledge in a technical interview of the numerous skills listed below.
